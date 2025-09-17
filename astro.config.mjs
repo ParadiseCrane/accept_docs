@@ -56,30 +56,26 @@ export default defineConfig({
             { label: "Попытки", autogenerate: { directory: "tasks/attempts" } },
           ],
         },
-        {
-          label: "Уроки",
-          autogenerate: { directory: "assignments" },
-        },
-        {
-          label: "Турниры",
-          autogenerate: { directory: "tournaments" },
-        },
-        {
-          label: "Курсы",
-          items: [
-            {
-              label: "Обзор курсов",
-              link: "/courses/overview",
-            },
-            { label: "Курсы", autogenerate: { directory: "courses/course" } },
-            { label: "Модули", autogenerate: { directory: "courses/unit" } },
-            { label: "Уроки", autogenerate: { directory: "courses/lesson" } },
-          ],
-        },
-        {
-          label: "Контакты",
-          autogenerate: { directory: "contacts" },
-        },
+        // {
+        //   label: "Уроки",
+        //   autogenerate: { directory: "assignments" },
+        // },
+        // {
+        //   label: "Турниры",
+        //   autogenerate: { directory: "tournaments" },
+        // },
+        // {
+        //   label: "Курсы",
+        //   items: [
+        //     {
+        //       label: "Обзор курсов",
+        //       link: "/courses/overview",
+        //     },
+        //     { label: "Курсы", autogenerate: { directory: "courses/course" } },
+        //     { label: "Модули", autogenerate: { directory: "courses/unit" } },
+        //     { label: "Уроки", autogenerate: { directory: "courses/lesson" } },
+        //   ],
+        // },
       ],
       customCss: ["./src/styles/global.css"], // For tailwind
     }),
