@@ -7,37 +7,88 @@ import BugsDisclaimer from '../../../../components/BugsDisclaimer.astro';
 
 <BugsDisclaimer />
 
-Occaecat elit occaecat labore est. Cupidatat nulla irure deserunt consequat aute sint. Et incididunt culpa labore ex ex cupidatat excepteur ut consequat anim tempor est sit mollit. Consequat culpa in aliquip excepteur pariatur dolor fugiat nostrud sint cupidatat. Ad aliquip proident officia elit sunt in. Elit aliqua dolor occaecat enim proident ea culpa aliqua duis reprehenderit eu ea. Fugiat deserunt officia incididunt voluptate culpa proident in velit nisi eiusmod laboris cillum.
-## Информация
-Вкладка **Информация** содержит всё что нужно знать о попытке кроме непосредственно кода.
+Попытки — это второй по важности элемент платформы.
+Они позволяют ученикам получать **обратную связь по [задачам](/tasks/overview)**,
+а преподавателям — **оценивать** прогресс.
 
-На скриншоте ниже отмечена следующая информация:
-- (1) [Основные сведения](#основные-сведения)
-- (2) Вероятность плагиата
-- (3) [ИИ подсказка](#ии-подсказка)
-- (4) [Таблица результатов](#таблица-результатов)
-- (5) [Кнопка бана/разбана](#банразбан) попытки
+---
+
+## Информация
+Вкладка **"Информация"** содержит все данные о попытке, кроме самого кода.
+
+На скриншоте вы видите:
+- **(1)** [Основные сведения](#основные-сведения)
+- **(2)** [Вероятность AI плагиата](#вероятность-ai-плагиата)
+- **(3)** [Подсказка от ИИ](#подсказка-от-ии)
+- **(4)** [Таблица результатов](#таблица-результатов)
+- **(5)** [Кнопка "Бан/Разбан"](#банразбан) попытки
 
 ![Вкладка информация](../../../../assets/task/attempt/step-1.png)
 
+---
+
+
 ### Основные сведения
-Elit culpa quis sit enim elit laboris aute. Fugiat ullamco cupidatat eiusmod sint enim duis. Ex consectetur excepteur id duis non dolore aliquip culpa cupidatat labore elit laborum. Ad ullamco tempor elit fugiat fugiat irure et excepteur. Fugiat cupidatat sint enim laborum sit voluptate qui reprehenderit velit mollit cillum laboris reprehenderit.
 
-Nostrud incididunt exercitation ipsum aliquip ex enim laborum consectetur mollit do excepteur aliquip culpa magna. Do voluptate nulla irure laborum mollit aute amet in amet. Minim sint minim amet officia id sunt esse sit. Id veniam proident deserunt fugiat anim aliqua culpa id tempor cillum sint reprehenderit.
-### ИИ подсказки
-Ipsum nulla labore culpa do officia et deserunt minim sunt est. Non consectetur sit eiusmod proident adipisicing dolor ea excepteur id nostrud cillum elit. Duis mollit ex aliquip occaecat duis anim eiusmod dolor eu anim. Laboris elit sunt tempor enim minim exercitation commodo pariatur fugiat laborum voluptate. In nulla dolor tempor eiusmod elit incididunt adipisicing id magna culpa enim et pariatur. Proident adipisicing nisi cillum sit pariatur do ea id adipisicing incididunt incididunt laboris.
+Здесь собрана ключевая информация:
+* **Дата** отправки.
+* **Название задачи** (с ссылкой).
+* **Автор** попытки (с ссылкой на его профиль).
+* **[Язык](/tasks/attempts/additional/#python) ** решения.
+* **Статус** (в очереди, тестируется или протестирована).
+* **Ограничения** по времени и памяти.
+
+---
+
+### Вероятность AI-плагиата
+
+Платформа имеет собственную модель, которая анализирует код и определяет,
+насколько вероятно, что он был сгенерирован ИИ.
+Анализ основан на **синтаксисе** и **семантике** кода.
+
+Преподаватели могут вручную отметить попытку как плагиат,
+даже если он не связан с ИИ.
+
+---
+
+### Подсказки от ИИ
+
+Пользователь может запросить подсказку от ИИ,
+которая будет создана на основе текста задачи,
+кода решения и результатов
+([вердиктов](/tasks/attempts/additional/#что-означают-вердикты)) тестов.
+Подсказка не даст готовое решение, а **направит пользователя в правильном направлении**.
+
+Если решение уже **верное**,
+ИИ предложит, как его **улучшить** — сделать более эффективным или "чистым".
+
+---
+
 ### Таблица результатов
-Duis deserunt incididunt voluptate laborum consequat. Mollit amet cupidatat sunt deserunt non amet commodo labore minim esse aute elit velit. Do pariatur amet cupidatat qui labore sit consequat excepteur minim dolore quis excepteur.
 
-Aute officia exercitation pariatur dolor deserunt id enim Lorem id velit anim dolore eiusmod. Laborum amet magna Lorem eiusmod. Consequat irure reprehenderit pariatur voluptate quis eiusmod eu. Labore ea proident ut cupidatat enim sint labore est. Dolore ex dolore magna incididunt pariatur. Tempor veniam sunt laboris id non in ad irure deserunt. Reprehenderit occaecat ad aliquip quis velit et cillum aliquip cillum aliqua.
+Эта таблица показывает, как программа пользователя справилась с **каждым [тестом](/tasks/add-edit#шаг-2-редактирование-тестов)**.
+Рядом с каждым тестом указан расширенный **[вердикт](/tasks/attempts/additional/#что-означают-вердикты)**,
+чтобы пользователь (и преподаватели) видели, насколько корректно работает код пользователя.
+Задача считается решённой, если все тесты имеют вердикт **"Accepted"** (OK).
 
-## Посылки
-На этой вкладке приведено решение придоставленное пользователем.
+---
+
+## Посылка
+На вкладке **"Посылка"** вы можете увидеть свой отправленный код.
+Для популярных языков предусмотрена удобная подсветка синтаксиса.
 
 ![Вкладка посылки](../../../../assets/task/attempt/step-2.png)
 
-Occaecat qui ea velit est eu culpa. Magna laboris duis aliquip fugiat proident. Magna do aliqua qui elit esse aliqua velit laborum exercitation consequat.
-## Бан/Разбан
-Pariatur nulla nostrud occaecat elit nostrud enim dolor exercitation sint officia. Occaecat qui sunt anim consectetur officia dolor voluptate deserunt Lorem reprehenderit. Amet eu officia id reprehenderit est consectetur deserunt nisi ipsum. Aliqua tempor do deserunt sint exercitation culpa cillum. Minim cupidatat minim irure excepteur duis consequat. Pariatur enim ex nisi exercitation laborum nostrud eiusmod.
+---
 
-Adipisicing duis occaecat sunt duis qui consequat reprehenderit minim excepteur eu in amet culpa non. Aute officia ea exercitation in quis aliquip adipisicing ipsum labore. Esse elit dolor esse dolore consequat in esse laboris.
+## Бан/Разбан
+
+Преподаватели могут **забанить** попытку,
+если она нарушает правила, например, из-за неспортивного поведения или плагиата.
+При этом указывается причина.
+
+
+Забаненная попытка **не учитывается** в итоговых таблицах результатов,
+но остаётся доступной для просмотра.
+Автор получает уведомление о том, что его попытка забанена.
+При необходимости, преподаватель может отменить бан.
