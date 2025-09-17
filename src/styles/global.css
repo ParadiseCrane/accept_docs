@@ -1,0 +1,53 @@
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+/* Dark mode colors. */
+:root {
+	--sl-color-accent-low: #0a263b;
+	--sl-color-accent: #006fae;
+	--sl-color-accent-high: #adcde8;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #eceef2;
+	--sl-color-gray-2: #c0c2c7;
+	--sl-color-gray-3: #888b96;
+	--sl-color-gray-4: #545861;
+	--sl-color-gray-5: #353841;
+	--sl-color-gray-6: #24272f;
+	--sl-color-black: #17181c;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #c2daef;
+	--sl-color-accent: #0071b1;
+	--sl-color-accent-high: #023556;
+	--sl-color-white: #17181c;
+	--sl-color-gray-1: #24272f;
+	--sl-color-gray-2: #353841;
+	--sl-color-gray-3: #545861;
+	--sl-color-gray-4: #888b96;
+	--sl-color-gray-5: #c0c2c7;
+	--sl-color-gray-6: #eceef2;
+	--sl-color-gray-7: #f5f6f8;
+	--sl-color-black: #ffffff;
+}
+
+starlight-theme-select {
+  min-width: 8rem;
+}
+
+starlight-theme-select select {
+  width: 100%;
+}
+
+.social-icons svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.mainPage svg {
+	width: 3rem;
+	height: 3rem;
+}
