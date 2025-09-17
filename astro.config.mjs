@@ -53,6 +53,10 @@ export default defineConfig({
               label: "Обзор задач",
               link: "/tasks/overview",
             },
+            {
+              label: "Добавление и редактирование задачи",
+              link: "/tasks/add-edit",
+            },
             { label: "Попытки", autogenerate: { directory: "tasks/attempts" } },
           ],
         },
