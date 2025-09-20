@@ -14,6 +14,8 @@ hero:
       link: https://code.accept-school.ru/
       icon: external
       variant: minimal
+      attrs:
+        target: _blank
 ---
 
 import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
@@ -22,45 +24,45 @@ import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 
 <div class="mainPage">
 <CardGrid stagger>
-	<Card title="Задачи" icon="pencil">
-		<LinkButton
-			href="/tasks/overview"
-			variant="minimal"
-			icon="right-arrow"
-			iconPlacement="end"
-		>
-			Как добавлять, редактировать и сдавать на проверку задачи.
-		</LinkButton>
-	</Card>
-	<Card title="Уроки" icon="seti:notebook">
-		<LinkButton
-			href="/assignments/overview"
-			variant="minimal"
-			icon="right-arrow"
-			iconPlacement="end"
-		>
-			Как создавать и администрировать уроки.
-		</LinkButton>
-	</Card>
-	<Card title="Турниры" icon="laptop">
-		<LinkButton
-			href="/tournaments/overview"
-			variant="minimal"
-			icon="right-arrow"
-			iconPlacement="end"
-		>
-			Как проводить и управлять турнирами.
-		</LinkButton>
-	</Card>
-	<Card title="Курсы" icon="open-book">
-		<LinkButton
-			href="/courses/overview"
-			variant="minimal"
-			icon="right-arrow"
-			iconPlacement="end"
-		>
-			Как создавать и использовать курсы.
-		</LinkButton>
-	</Card>
+    <Card title="Задачи" icon="pencil">
+        <LinkButton
+            href="/references/tasks/overview"
+            variant="minimal"
+            icon="right-arrow"
+            iconPlacement="end"
+        >
+            Как добавлять, редактировать и сдавать на проверку задачи.
+        </LinkButton>
+    </Card>
+    <Card title="Уроки" icon="seti:notebook">
+        <LinkButton
+            href="/references/assignments/overview"
+            variant="minimal"
+            icon="right-arrow"
+            iconPlacement="end"
+        >
+            Как создавать и администрировать уроки.
+        </LinkButton>
+    </Card>
+    <Card title="Турниры" icon="laptop">
+        <LinkButton
+            href="/references/tournaments/overview"
+            variant="minimal"
+            icon="right-arrow"
+            iconPlacement="end"
+        >
+            Как проводить и управлять турнирами.
+        </LinkButton>
+    </Card>
+    <Card title="Курсы" icon="open-book">
+        <LinkButton
+            href="/references/courses/overview"
+            variant="minimal"
+            icon="right-arrow"
+            iconPlacement="end"
+        >
+            Как создавать и использовать курсы.
+        </LinkButton>
+    </Card>
 </CardGrid>
 </div>

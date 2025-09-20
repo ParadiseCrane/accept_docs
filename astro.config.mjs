@@ -3,6 +3,11 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 import tailwindcss from "@tailwindcss/vite";
+import starlightLinksValidatorPlugin from "starlight-links-validator";
+import starlightImageZoomPlugin from "starlight-image-zoom";
+import starlightScrollToTop from "starlight-scroll-to-top";
+import starlightAutoSidebar from "starlight-auto-sidebar";
+import starlightAutoDrafts from "starlight-auto-drafts";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,8 +23,8 @@ export default defineConfig({
       },
       logo: {
         src: "./src/assets/logo.svg",
-        // replacesTitle: true,
       },
+      lastUpdated: true,
       defaultLocale: "root",
       locales: {
         root: { label: "Русский", lang: "ru-RU" },
@@ -47,41 +52,34 @@ export default defineConfig({
           autogenerate: { directory: "getting-started" },
         },
         {
-          label: "Задачи",
-          items: [
-            {
-              label: "Обзор задач",
-              link: "/tasks/overview",
-            },
-            {
-              label: "Создание и редактирование задач",
-              link: "/tasks/add-edit",
-            },
-            { label: "Попытки", autogenerate: { directory: "tasks/attempts" } },
-          ],
+          label: "Рецепты",
+          autogenerate: { directory: "recipes" },
         },
-        // {
-        //   label: "Уроки",
-        //   autogenerate: { directory: "assignments" },
-        // },
-        // {
-        //   label: "Турниры",
-        //   autogenerate: { directory: "tournaments" },
-        // },
-        // {
-        //   label: "Курсы",
-        //   items: [
-        //     {
-        //       label: "Обзор курсов",
-        //       link: "/courses/overview",
-        //     },
-        //     { label: "Курсы", autogenerate: { directory: "courses/course" } },
-        //     { label: "Модули", autogenerate: { directory: "courses/unit" } },
-        //     { label: "Уроки", autogenerate: { directory: "courses/lesson" } },
-        //   ],
-        // },
+        {
+          label: "База знаний",
+          autogenerate: { directory: "references" },
+          collapsed: true,
+        },
       ],
       customCss: ["./src/styles/global.css"], // For tailwind
+      plugins: [
+        starlightAutoDrafts(),
+        starlightAutoSidebar(),
+        // starlightLinksValidatorPlugin(),
+        starlightImageZoomPlugin(),
+        starlightScrollToTop({
+          position: "right",
+          tooltipText: {
+            ru: "Наверх",
+          },
+          smoothScroll: true,
+          showTooltip: true,
+          threshold: 20,
+          borderRadius: "50",
+          showProgressRing: true,
+          progressRingColor: "#ff6b6b",
+        }),
+      ],
     }),
   ],
 
