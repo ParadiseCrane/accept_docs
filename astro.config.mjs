@@ -3,16 +3,19 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 import tailwindcss from "@tailwindcss/vite";
-import starlightLinksValidatorPlugin from "starlight-links-validator";
 import starlightImageZoomPlugin from "starlight-image-zoom";
 import starlightScrollToTop from "starlight-scroll-to-top";
 import starlightAutoSidebar from "starlight-auto-sidebar";
 import starlightAutoDrafts from "starlight-auto-drafts";
 
+const site = "https://docs.accept-school.ru";
+const ogUrl = new URL("ogimage.jpg", site).href;
+const ogImageAlt = "Учись программировать";
+
 // https://astro.build/config
 export default defineConfig({
   // sitemap generation
-  site: "https://docs.accept-school.ru",
+  site: site,
 
   integrations: [
     starlight({
@@ -24,6 +27,10 @@ export default defineConfig({
       logo: {
         src: "./src/assets/logo.svg",
       },
+      head: [
+        { tag: "meta", attrs: { name: "og:image", content: ogUrl } },
+        { tag: "meta", attrs: { name: "og:image:alt", content: ogImageAlt } },
+      ],
       lastUpdated: true,
       defaultLocale: "root",
       locales: {
