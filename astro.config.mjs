@@ -72,7 +72,6 @@ export default defineConfig({
       plugins: [
         starlightAutoDrafts(),
         starlightAutoSidebar(),
-        // starlightLinksValidatorPlugin(),
         starlightImageZoomPlugin(),
         starlightScrollToTop({
           position: "right",
