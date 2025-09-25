@@ -8,7 +8,11 @@ import starlightScrollToTop from "starlight-scroll-to-top";
 import starlightAutoSidebar from "starlight-auto-sidebar";
 import starlightAutoDrafts from "starlight-auto-drafts";
 
-const site = "https://docs.accept-school.ru";
+// const site = "https://docs.accept-school.ru";
+// const base = "";
+const site = "https://paradisecrane.github.io";
+const base = "/accept_docs";
+
 const ogUrl = new URL("ogimage.jpg", site).href;
 const ogImageAlt = "Учись программировать";
 
@@ -16,6 +20,7 @@ const ogImageAlt = "Учись программировать";
 export default defineConfig({
   // sitemap generation
   site: site,
+  base: base,
 
   integrations: [
     starlight({
