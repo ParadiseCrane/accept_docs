@@ -4,6 +4,8 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
+@view-transition {navigation: auto}
+
 /* Dark mode colors. */
 :root {
 	--sl-color-accent-low: #0a263b;
